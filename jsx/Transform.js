@@ -2,10 +2,16 @@ var Transform = React.createClass({
 
 	getInitialState: function(){
 		return{
-			welcome: '<div />'
+			input: '<div />',
 			output:'',
 			err: ''
 		}
+	},
+
+	componentDidMount: function(){
+		this.setState({
+			output:JSXTransformer.transform(this.state.input).code
+		})
 	},
 
 	update: function(ev){
