@@ -2,7 +2,7 @@ var Transform = React.createClass({
 
 	getInitialState: function(){
 		return{
-			input: '<div />',
+			input: '<div className="guardian" onClick={who}>Starlord!</div>',
 			output:'',
 			err: ''
 		}
@@ -39,8 +39,15 @@ var Transform = React.createClass({
 				</div>
 
 				<div className="output">
-					<textarea defaultValue={this.state.input} onChange={this.update} />
-					<pre>{this.state.output}</pre>
+					<div className="section left-section">
+						<h3>JSX Template</h3>
+						<textarea defaultValue={this.state.input} onChange={this.update} />
+					</div>
+
+					<div className="section right-section">
+						<h3>JavaScript</h3>
+						<pre>{this.state.output}</pre>
+					</div>
 				</div>
 			</div>
 		);

@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JSX Playground</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
 	
 	<script src="node_modules/react/dist/react.min.js"></script>
 	<script src="node_modules/react/dist/JSXTransformer.js"></script>
@@ -12,6 +15,19 @@
 
 <body>
 
+<header>
+	<h1>JSX Playground</h1>
+</header>
+
+<section id="app">
+	
+</section>
+
+
+<footer>
+	<p>A <b>React</b> Experiment by <a href="http://www.twitter.com/shaundunne">Shaun Dunne</a></p>
+</footer>
+
 
 <script type="text/jsx" src="jsx/Transform.js"></script>
 
@@ -20,10 +36,14 @@
 
 React.renderComponent(
 	<Transform />,
-	document.body
+	document.querySelector('#app')
 )
 
 </script>
+
+
+
+<a href="https://github.com/shaundunne"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
 	
 </body>
 </html>
